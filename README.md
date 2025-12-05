@@ -32,7 +32,7 @@ For a detailed comparison to Float32 and Float64 on CUDA devices, see [here](#co
 ## Installing
 
 ```
-pip install git+https://github.com/glassroom/generalized_orders_of_magnitude
+pip install git+https://github.com/dynamic-intelligence-lab/generalized_orders_of_magnitude
 ```
 
 Alternatively, you can download a single file to your project directory: [generalized_orders_of_magnitude.py](generalized_orders_of_magnitude/generalized_orders_of_magnitude.py).
@@ -182,19 +182,19 @@ The script will create two files: `'longest_chains.pt'`, a PyTorch file containi
 
 The code for estimating spectra of Lyapunov exponents in parallel, via a prefix scan over GOOMs, incorporating our selective-resetting method, is at:
 
-[https://github.com/glassroom/parallel_lyapunov_exponents](https://github.com/glassroom/parallel_lyapunov_exponents)
+[https://github.com/dynamic-intelligence-lab/parallel_lyapunov_exponents](https://github.com/dynamic-intelligence-lab/parallel_lyapunov_exponents)
 
 
 ### Deep RNNs that Apply Non-Diagonal SSMs in Parallel without Stabilization
 
 The code implementing deep recurrent neural networks that capture long-range dependencies via non-diagonal recurrences over GOOMs, without requiring any form of stabilization, is at:
 
-[https://github.com/glassroom/goom_ssm_rnn](https://github.com/glassroom/goom_ssm_rnn)
+[https://github.com/dynamic-intelligence-lab/goom_ssm_rnn](https://github.com/dynamic-intelligence-lab/goom_ssm_rnn)
 
 
 ## Selective Resetting
 
-In our paper, we formulate a method for selectively resetting interim states at any step in a linear recurrence, as we compute all states in the linear recurrence in parallel via a prefix scan. We apply this method as a component of our parallel algorithm for estimating the spectrum of Lyapunov exponents, over GOOMs. If you are interested in understanding how our selective-resetting method works, we recommend taking a look at [https://github.com/glassroom/selective_resetting/](https://github.com/glassroom/selective_resetting/), an implementation of selective resetting over floats instead of complex-typed GOOMs. We also recommend reading Appendix C of our paper, which explains the intuition behind selective resetting informally, with step-by-step examples.
+In our paper, we formulate a method for selectively resetting interim states at any step in a linear recurrence, as we compute all states in the linear recurrence in parallel via a prefix scan. We apply this method as a component of our parallel algorithm for estimating the spectrum of Lyapunov exponents, over GOOMs. If you are interested in understanding how our selective-resetting method works, we recommend taking a look at [https://github.com/dynamic-intelligence-lab/selective_resetting/](https://github.com/dynamic-intelligence-lab/selective_resetting/), an implementation of selective resetting over floats instead of complex-typed GOOMs. We also recommend reading Appendix C of our paper, which explains the intuition behind selective resetting informally, with step-by-step examples.
 
 
 ## Comparison to Float32 and Float64 on CUDA Devices
